@@ -1,0 +1,58 @@
+{
+    "name": "mvdnbrk/laravel-model-expires",
+    "description": "A package to assign expiration dates to Eloquent models",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "model",
+        "date",
+        "expire",
+        "expires",
+        "expiration",
+        "expirable"
+    ],
+    "homepage": "https://github.com/mvdnbrk/laravel-model-expires",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark van den Broek",
+            "email": "mvdnbrk@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/database": "^6.0 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "doctrine/dbal": "^2.5",
+        "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+        "phpunit/phpunit": "^8.0 || ^9.4"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mvdnbrk\\EloquentExpirable\\ExpirableServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Mvdnbrk\\EloquentExpirable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mvdnbrk\\EloquentExpirable\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
